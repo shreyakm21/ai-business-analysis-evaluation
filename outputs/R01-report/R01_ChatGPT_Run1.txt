@@ -1,0 +1,38 @@
+# Maple & Main — October 2026 Operations Briefing
+
+Case R01 · Prepared 2 November 2026 · All monetary amounts in INR
+
+## 1. Executive summary
+
+October net sales increased 6.67% compared with September but fell short of the October target by INR 4,000. Delivery performance is disputed: the dashboard indicates 90%, while the delivery narrative reports 94%; neither is designated authoritative. The return rate increased by 2 percentage points. Customer feedback was positive among survey respondents, but the optional, self-selected survey does not establish overall customer satisfaction.
+
+## 2. Performance table
+
+| Area              | October actual / calculated      | Comparison / target                                                                                                                      |
+| ----------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Sales             | Net sales: INR 96,000            | September: INR 90,000; increase INR 6,000 (6.67%). Target: INR 100,000; shortfall INR 4,000 (4.00%).                                     |
+| Delivery          | Dashboard: 180/200 = 90% on time | Target: 95%; shortfall 5 percentage points. Narrative separately claims 94%; discrepancy unresolved.                                     |
+| Returns           | 24/300 = 8.00% return rate       | September: 18/300 = 6.00%; increase 2 percentage points (33.33% relative increase in rate).                                              |
+| Customer feedback | 16/20 = 80% positive responses   | Optional survey sent to 200 customers; 20 responded (10% response rate). No population-wide satisfaction target or estimate established. |
+
+## 3. Data-quality issues and limitations
+
+- Delivery figures conflict: dashboard 90% versus narrative 94%, for the same period. The authoritative source and cause remain unconfirmed.
+- Packaging damage is a suspected contributor to increased returns, not a validated cause.
+- Survey respondents were self-selected; the 80% positive result applies only to respondents, not all customers.
+- Product costs and operating expenses are absent. Channel profitability cannot be calculated.
+- The report does not establish that proposed packaging or promotional changes would improve outcomes.
+
+## 4. Approved actions
+
+| Action                                                       | Owner  | Deadline        |
+| ------------------------------------------------------------ | ------ | --------------- |
+| Investigate conflicting delivery figures and report findings | Daniel | 6 November 2026 |
+| Validate return reasons                                      | Maya   | 9 November 2026 |
+
+## 5. Proposals awaiting approval
+
+- New packaging supplier.
+- 10% promotional discount.
+
+Neither proposal is approved, and the report provides no evidence establishing that either would improve performance.

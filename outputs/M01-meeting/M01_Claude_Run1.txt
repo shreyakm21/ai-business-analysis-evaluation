@@ -1,0 +1,32 @@
+# Retail Operations Review: Meeting Notes
+**Date:** 2 November 2026 | **Participants:** Priya (Operations Manager), Daniel (Inventory Analyst), Maya (Customer Service Lead), Leo (Marketing Coordinator)
+
+## 1. Summary
+The team discussed stock reporting differences, inconsistent refund-timing guidance, a proposed weekend discount, and the website return-policy page. Two actions have owners and deadlines. One has an owner but no deadline. One still needs an owner and deadline. No promotion was approved.
+
+## 2. Confirmed decisions
+- No promotion is approved.
+- Priya will review the return guide before anyone distributes it.
+- Daniel owns the margin analysis.
+- No campaign-copy assignment exists.
+- The delayed-return-entries explanation is recorded as unconfirmed, not as the root cause.
+
+## 3. Action register
+
+| Action | Status | Owner | Deadline | Dependency or approval |
+|---|---|---|---|---|
+| Reconcile warehouse count and inventory workbook; send Priya a list of unresolved items | Agreed | Daniel | 5 Nov 2026 | None stated |
+| Draft one-page return guide and send to Priya | Agreed | Maya | 6 Nov 2026 | Priya's review before any distribution |
+| Prepare margin analysis | Owner agreed; deadline not agreed | Daniel | Not agreed ("to be agreed") | Daniel cannot commit to a date until the reconciliation is done |
+| Review website return-policy page | Review agreed as needed; not yet assigned | Not assigned | Not assigned | Owner and deadline to be set at the next meeting |
+
+## 4. Proposals and conditional future work
+- **15% weekend discount to clear older stock** (raised by Leo): proposal only. Not approved. A decision needs margin information first.
+- **Campaign copy** (Leo): conditional on a promotion being approved later. Leo will not start before approval. Not assigned, with no deadline.
+
+## 5. Open questions and unconfirmed explanations
+- **Cause of the differences between warehouse count and workbook:** not confirmed. Daniel's hypothesis that delayed return entries are responsible is unconfirmed.
+- **Margin analysis deadline:** not agreed.
+- **Website return-policy page:** owner and deadline not assigned.
+- **Next meeting:** to be arranged separately; no date set.
+- **Whether to approve the weekend discount:** undecided, pending the margin analysis.

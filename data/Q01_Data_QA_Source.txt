@@ -1,0 +1,41 @@
+SYNTHETIC BUSINESS MATERIAL — MAPLE & MAIN
+Case ID: Q01
+Period: October 2026
+This is a separate scenario from earlier cases.
+All monetary amounts are INR.
+
+DATA DEFINITIONS
+
+- Orders are completed orders.
+- Net sales already include discounts and refunds.
+  Do not subtract refunds again.
+- Refunds processed are supplied for reference only.
+- "Not available" means missing information, not zero.
+- Website visits cover the Online channel only.
+- Conversion rate = completed Online orders / website visits.
+- No customer identifiers or purchase histories are supplied.
+
+CHANNEL PERFORMANCE
+
+Online
+Completed orders: 120
+Net sales: 72,000
+Refunds processed: 3,000
+Website visits: 2,400
+Product costs: Not available
+Operating expenses: Not available
+Customer complaints: 0
+
+Store
+Completed orders: 80
+Net sales: 48,000
+Refunds processed: 2,000
+Website visits: Not applicable
+Product costs: Not available
+Operating expenses: Not available
+Customer complaints: Not available
+
+TARGETS
+
+Online conversion-rate target: 6%
+No order-value or profitability targets are supplied.

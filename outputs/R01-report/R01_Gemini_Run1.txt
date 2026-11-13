@@ -1,0 +1,78 @@
+### 1. Executive Summary
+
+Maple & Main's October 2026 net sales reached INR 96,000, missing the INR 100,000 target by 4% but growing 6.67% over September (INR 90,000). Online net sales were INR 52,000 and Store net sales were INR 44,000. Operational metrics show mixed performance, with delivery compliance falling below target and returns increasing. Conflicting delivery figures and self-selected survey responses introduce analytical limitations.
+
+### 2. Performance Table
+
+| Metric | October Actual | Target / Comparison | Variance / Status |
+| --- | --- | --- | --- |
+| **Net Sales** | INR 96,000
+
+ | INR 100,000 target
+
+ | -INR 4,000 (-4.00%) |
+| **MoM Sales Growth** | INR 96,000
+
+ | INR 90,000 (September)
+
+ | +INR 6,000 (+6.67%) |
+| **Online Net Sales** | INR 52,000
+
+ | N/A | N/A |
+| **Store Net Sales** | INR 44,000
+
+ | N/A | N/A |
+| **On-Time Delivery (Dashboard)** | 90.00% (180 / 200)
+
+ | 95.00% target
+
+ | -5.00 percentage pts |
+| **On-Time Delivery (Narrative)** | 94.00%
+
+ | 95.00% target
+
+ | -1.00 percentage pt |
+| **Returns Rate** | 8.00% (24 / 300 units)
+
+ | 6.00% (18 / 300 units in Sep)
+
+ | +2.00 percentage pts |
+| **Customer Feedback** | 80.00% positive (16 / 20)
+
+ | 10.00% response rate (20 / 200)
+
+ | Self-selected sample
+
+ |
+
+### 3. Data-Quality Issues and Limitations
+
+* **Profitability:** Product costs and operating expenses are excluded; channel profitability cannot be calculated.
+
+
+* **Conflicting Delivery Data:** The delivery dashboard reports 90.00% on-time (180 out of 200), whereas a narrative update reports 94.00%. Neither source is designated authoritative, and the reason for the difference is uninvestigated.
+
+
+* **Survey Limitations:** The customer feedback survey reflects a self-selected sample of 20 respondents out of 200 surveyed and does not establish the satisfaction level of all customers.
+
+
+* **Unvalidated Returns:** Returned units increased from 18 to 24 month-over-month. While packaging damage is suspected by the team, return reasons remain unvalidated.
+
+
+
+### 4. Approved Actions with Owners and Deadlines
+
+* **Daniel:** Investigate the conflicting delivery figures and report findings by 6 November 2026.
+
+
+* **Maya:** Validate return reasons by 9 November 2026.
+
+
+
+### 5. Proposals Awaiting Approval
+
+* Engaging a new packaging supplier.
+
+
+* Implementing a 10% promotional discount.
+(Note: No evidence currently establishes that either proposal would improve reported outcomes.)

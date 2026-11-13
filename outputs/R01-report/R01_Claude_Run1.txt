@@ -1,0 +1,37 @@
+# October 2026 Operations Briefing
+
+## 1. Executive summary
+October net sales rose from September but missed target. On-time delivery missed target under both reported figures, which conflict with each other. Returns rose, and the cause is unvalidated. Survey results describe respondents only. Profitability cannot be assessed.
+
+## 2. Performance table
+
+| Area | Actual / calculated | Comparison or target |
+|---|---|---|
+| **Net sales** | ₹96,000 | Sep ₹90,000: +₹6,000 (+6.67%). Target ₹100,000: shortfall ₹4,000 (96.00% of target) |
+| Online / Store | ₹52,000 / ₹44,000 | Sum = ₹96,000 (54.17% / 45.83%) |
+| **Delivery (dashboard)** | 180 ÷ 200 = 90.00% | Target 95%: 5.00 points below |
+| **Delivery (narrative)** | 94% (reported claim, not calculated) | Target 95%: 1.00 point below |
+| **Returns** | Oct 24 ÷ 300 = 8.00% | Sep 18 ÷ 300 = 6.00%: +6 units, +2.00 points |
+| **Survey** | 16 ÷ 20 = 80.00% positive among respondents; 20 ÷ 200 = 10.00% response rate | No target given |
+
+## 3. Data-quality issues and limitations
+- **Conflicting delivery figures:** The dashboard calculation (90.00%) and the delivery team's statement (94%) cover the same period but differ by 4 points. The reason is uninvestigated, and neither source is designated authoritative. I have not chosen between them. Both fall below the 95% target.
+- **Returns cause unestablished:** Packaging damage is a team suspicion only. Return reasons are not yet validated.
+- **Survey:** Respondents were self-selected and only 10.00% of recipients replied. The 80.00% positive rating applies to those 20 respondents and cannot be generalised to all customers.
+- **Profitability:** The report excludes product costs and operating expenses, so channel profitability cannot be calculated.
+- **Sales growth:** The report gives no explanation for the September-to-October increase.
+
+## 4. Approved actions
+
+| Action | Owner | Deadline |
+|---|---|---|
+| Investigate conflicting delivery figures and report findings | Daniel | 6 Nov 2026 |
+| Validate return reasons | Maya | 9 Nov 2026 |
+
+## 5. Proposals awaiting approval
+- **New packaging supplier:** not approved.
+- **10% promotional discount:** not approved.
+
+No evidence currently establishes that either proposal would improve the reported outcomes. The supplier idea also depends on the unvalidated packaging-damage hypothesis.
+
+*Word count: about 330.*

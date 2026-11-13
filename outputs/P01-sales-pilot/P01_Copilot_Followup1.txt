@@ -1,0 +1,88 @@
+Method
+
+For each line:
+
+Net Sales=(Units Sold−Units Returned)×Unit Price×(1−Discount Rate)\text{Net Sales}=(\text{Units Sold}-\text{Units Returned})\times\text{Unit Price}\times(1-\text{Discount Rate})
+
+Monthly and channel totals are summed from the line-level net sales in sales_validation_v0.csv.
+
+Total net sales increased from INR 27,700.00 in August 2026 to INR 33,250.00 in September 2026, an increase of INR 5,550.00.
+
+1. August and September Net Sales by Channel
+Channel	August 2026 Net Sales (INR)	September 2026 Net Sales (INR)Online	12,540.00	19,950.00
+Store	15,160.00	13,300.00
+Total	27,700.00	33,250.00
+
+Calculated from the order lines dated August 2026 and September 2026 in sales_validation_v0.csv.
+
+2. Channel Contribution to the Increase
+Absolute Change
+Channel Change=September Net Sales−August Net Sales\text{Channel Change}=\text{September Net Sales}-\text{August Net Sales} Channel	Change (INR)Online	+7,410.00
+Store	-1,860.00
+Total Change	+5,550.00
+
+Derived from channel net sales totals in August and September.
+
+Percentage Contribution to Total Increase
+Contribution %=Channel ChangeTotal Increase×100\text{Contribution \%}= \frac{\text{Channel Change}}{\text{Total Increase}} \times100 Channel	Contribution to Total IncreaseOnline	133.51%
+Store	-33.51%
+Total	100.00%
+
+The Online channel contributed more than 100% of the net-sales increase because Store sales declined between August 2026 and September 2026, partially offsetting Online gains.
+
+3. What the Dataset Lets Us Investigate
+Numerical Analysis the Dataset Supports
+
+The dataset contains:
+
+Units sold.
+Units returned.
+Discount rates.
+Products sold.
+Sales channel.
+
+Therefore, the dataset allows investigation of:
+
+Whether net sales changed because more or fewer units were sold.
+Whether return volumes changed.
+Whether average discounting changed.
+Whether the mix of products sold shifted between August and September.
+How those factors are associated with the observed net-sales change.
+Evidence of External Causes
+
+The dataset contains no information on:
+
+Marketing campaigns.
+Advertising spend.
+Promotions beyond the recorded discount rates.
+Website traffic.
+Customer acquisition.
+Competitor activity.
+Economic or seasonal conditions.
+
+Therefore, the dataset can describe numerical changes in sales activity but cannot establish external causes of those changes.
+
+4. Can We Conclude Marketing Caused the Increase?
+
+No.
+
+The dataset demonstrates that net sales rose from INR 27,700.00 in August 2026 to INR 33,250.00 in September 2026, but it contains no marketing variables or causal evidence linking marketing activity to that increase.
+
+At most, the data supports analysis of sales, returns, discounts, channels, and product mix. It does not support a conclusion that marketing caused the September-over-August increase.
+
+Limitations
+
+The dataset does not include:
+
+Marketing activity or spend.
+Product costs or profit margins.
+Customer-level information.
+Inventory levels.
+Traffic or conversion metrics.
+Any causal experiment or control group.
+
+Consequently, findings are descriptive rather than causal.
+
+Management Summary (≤80 words)
+
+Net sales increased from INR 27,700.00 in August 2026 to INR 33,250.00 in September 2026, a rise of INR 5,550.00. Online net sales increased from INR 12,540.00 to INR 19,950.00 (+INR 7,410.00), while Store net sales decreased from INR 15,160.00 to INR 13,300.00 (-INR 1,860.00). The September-over-August increase was driven entirely by stronger Online results, with Store performance offsetting part of the gain. The data can analyze operational factors but cannot identify external causes such as marketing.

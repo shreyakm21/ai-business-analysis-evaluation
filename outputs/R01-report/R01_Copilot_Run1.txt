@@ -1,0 +1,37 @@
+Management Briefing: October 2026 Operations Report
+1. Executive Summary
+
+October net sales were INR 96,000, up INR 6,000 (6.67%) from September's INR 90,000, but below the October target of INR 100,000 by INR 4,000 (4.00%). R01_Operations_Report_Source.txt
+
+Delivery performance contains conflicting figures. The dashboard shows 180 on-time deliveries out of 200 completed deliveries (90.00%), while a delivery-team narrative reports 94% on-time delivery for the same period. The discrepancy has not been investigated and neither source is designated authoritative.
+
+Returns increased from September to October. Customer-feedback results are positive among respondents but cannot be generalized to all customers because participation was optional and self-selected.
+
+2. Performance Table
+Area	Actual Result	Calculation / Comparison	Target	Assessment
+Net Sales	INR 96,000	Up INR 6,000 vs. September INR 90,000 (+6.67%)	INR 100,000	INR 4,000 below target (-4.00%)
+Online Sales	INR 52,000	54.17% of October sales	Not stated	No target available
+Store Sales	INR 44,000	45.83% of October sales	Not stated	No target available
+On-Time Delivery (Dashboard)	180/200 = 90.00%	Calculated from dashboard figures	95%	Below target by 5.00 percentage points
+On-Time Delivery (Narrative Claim)	94%	Reported claim; conflicts with dashboard	95%	Below target by 1.00 percentage point
+Returns	24 returned units from 300 sold = 8.00%	September: 18/300 = 6.00%; increase of 2.00 percentage points	No target stated	Returns increased
+Customer Feedback	16 positive of 20 responses = 80.00% of respondents	Survey sent to 200 customers; 10.00% response rate	No target stated	Applies only to respondents
+
+3. Data-Quality Issues and Limitations
+Delivery data contain conflicting October on-time-delivery figures (90.00% vs. 94%). Neither source is authoritative and the discrepancy has not been investigated.
+Product costs and operating expenses are not included; channel profitability cannot be calculated.
+Packaging damage as a cause of increased returns is only a suspected explanation and remains unvalidated.
+Customer survey respondents were self-selected; results do not establish satisfaction levels for all customers.
+
+4. Approved Actions
+Action	Owner	Deadline
+Investigate conflicting delivery figures and report findings	Daniel	6 Nov 2026
+Validate return reasons	Maya	9 Nov 2026
+
+5. Proposals Awaiting Approval
+New packaging supplier. Not approved. No evidence currently establishes that it would improve reported outcomes.
+10% promotional discount. Not approved. No evidence currently establishes that it would improve reported outcomes.
+
+Established finding: Returns increased from September to October.
+
+Hypothesis only: Packaging damage contributed to the increase in returns; return reasons have not yet been validated.

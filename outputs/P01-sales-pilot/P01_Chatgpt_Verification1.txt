@@ -1,0 +1,243 @@
+# Maple & Main — Audit of September vs. August Sales Analysis
+
+I re-audited the original `sales_validation_v0.csv` directly. I did not use the previous analysis as the source of truth.
+
+Audit conclusion: The previous channel net-sales figures, channel contributions, unit totals, return totals, discount-rate comparisons, and product-level net-sales figures are correct. I found no material arithmetic errors in those results.
+
+There are, however, a few points where the previous response could be more precise, particularly regarding discount-rate weighting, product mix, and the distinction between numerical findings and causal explanations. I address those below.
+
+## 1. All 12 August and September source rows
+
+The following table reproduces the 12 relevant source rows and recalculates net sales using the specified formula.
+
+\\[ \text{Net Sales}=(U_s-U_r)\times P\times(1-D) \\]
+
+Where:
+
+- \\(U_s\\) = units sold
+- \\(U_r\\) = units returned
+- \\(P\\) = unit price in INR
+- \\(D\\) = discount rate
+
+| Line_ID | Month     | Channel | Product        | Units sold | Units returned | Unit price (₹) | Discount | Net sales (₹) |
+| ------- | --------- | ------- | -------------- | ---------- | -------------- | -------------- | -------- | ------------- |
+| L007    | August    | Store   | Desk Organizer | 12         | 1              | 500            | 0%       | 5,500.00      |
+| L008    | August    | Online  | Table Lamp     | 10         | 2              | 800            | 10%      | 5,760.00      |
+| L009    | August    | Store   | Notebook Set   | 16         | 0              | 250            | 10%      | 3,600.00      |
+| L010    | August    | Online  | Storage Basket | 8          | 1              | 600            | 20%      | 3,360.00      |
+| L011    | August    | Store   | Water Bottle   | 18         | 0              | 400            | 10%      | 6,480.00      |
+| L012    | August    | Online  | Cushion Cover  | 12         | 2              | 300            | 0%       | 3,000.00      |
+| L013    | September | Online  | Desk Organizer | 15         | 0              | 500            | 10%      | 6,750.00      |
+| L014    | September | Store   | Table Lamp     | 9          | 1              | 800            | 0%       | 6,400.00      |
+| L015    | September | Online  | Notebook Set   | 20         | 2              | 250            | 20%      | 3,600.00      |
+| L016    | September | Store   | Storage Basket | 10         | 0              | 600            | 10%      | 5,400.00      |
+| L017    | September | Online  | Water Bottle   | 22         | 2              | 400            | 10%      | 7,200.00      |
+| L018    | September | Store   | Cushion Cover  | 14         | 1              | 300            | 0%       | 3,900.00      |
+
+### Example verification: L015
+
+September Notebook Set:
+
+\\[ (20-2)\times250\times(1-0.20) \\]
+
+\\[ =18\times250\times0.80 =\text{₹3,600.00} \\]
+
+This confirms the calculation method used for all 12 rows.
+
+## 2. Recalculated monthly net sales by channel
+
+I grouped the source rows by month and channel and summed their recalculated net sales.
+
+### August 2026
+
+| Channel | Contributing Line_IDs | Calculation           | Net sales  |
+| ------- | --------------------- | --------------------- | ---------- |
+| Online  | L008, L010, L012      | 5,760 + 3,360 + 3,000 | ₹12,120.00 |
+| Store   | L007, L009, L011      | 5,500 + 3,600 + 6,480 | ₹15,580.00 |
+| Total   | L007–L012             | 12,120 + 15,580       | ₹27,700.00 |
+
+### September 2026
+
+| Channel | Contributing Line_IDs | Calculation           | Net sales  |
+| ------- | --------------------- | --------------------- | ---------- |
+| Online  | L013, L015, L017      | 6,750 + 3,600 + 7,200 | ₹17,550.00 |
+| Store   | L014, L016, L018      | 6,400 + 5,400 + 3,900 | ₹15,700.00 |
+| Total   | L013–L018             | 17,550 + 15,700       | ₹33,250.00 |
+
+Both monthly totals reconcile exactly with the source-row calculations.
+
+## 3. Recalculated channel changes and contributions
+
+The total September-over-August increase is:
+
+\\[ \Delta S=33,250-27,700 \\]
+
+\\[ \boxed{\Delta S=\text{₹5,550.00}} \\]
+
+For each channel:
+
+\\[ \text{Absolute Change}= S\_{\text{September}}-S\_{\text{August}} \\]
+
+\\[ \text{Contribution}= \frac{\text{Channel Absolute Change}}{5,550}\times100 \\]
+
+| Channel | August net sales | September net sales | Absolute change | Contribution |
+| ------- | ---------------- | ------------------- | --------------- | ------------ |
+| Online  | ₹12,120.00       | ₹17,550.00          | +₹5,430.00      | 97.84%       |
+| Store   | ₹15,580.00       | ₹15,700.00          | +₹120.00        | 2.16%        |
+| Total   | ₹27,700.00       | ₹33,250.00          | +₹5,550.00      | 100.00%      |
+
+### Online
+
+\\[ \frac{5,430}{5,550}\times100 =\boxed{97.84\\%} \\]
+
+### Store
+
+\\[ \frac{120}{5,550}\times100 =\boxed{2.16\\%} \\]
+
+The previous response's channel contributions are correct.
+
+The percentages describe each channel's share of the total absolute increase. They are not the channel-specific growth rates.
+
+For completeness, the recalculated growth rates are:
+
+| Comparison period        | Channel | Growth |
+| ------------------------ | ------- | ------ |
+| August to September 2026 | Online  | 44.80% |
+| August to September 2026 | Store   | 0.77%  |
+| August to September 2026 | Total   | 20.04% |
+
+These also match the previous response.
+
+## 4. Audit of previous factual statements
+
+I checked the previous response's statements about units, returns, prices, discounts, and product mix against the original CSV.
+
+### A. Units sold and returns
+
+| Metric         | August 2026 | September 2026 | Change |
+| -------------- | ----------- | -------------- | ------ |
+| Units sold     | 76          | 90             | +14    |
+| Units returned | 6           | 6              | 0      |
+| Units retained | 70          | 84             | +14    |
+
+The previous response stated that units sold increased by 14 and returns remained unchanged at 6.
+
+Audit result: Correct.
+
+The source rows reconcile as follows:
+
+- August units sold: 12 + 10 + 16 + 8 + 18 + 12 = 76.
+- September units sold: 15 + 9 + 20 + 10 + 22 + 14 = 90.
+- August returns: 1 + 2 + 0 + 1 + 0 + 2 = 6.
+- September returns: 0 + 1 + 2 + 0 + 2 + 1 = 6.
+
+The statement that retained units increased by 14 is also correct.
+
+### B. Prices
+
+The source CSV records the following unit prices:
+
+| Product        | August unit price | September unit price |
+| -------------- | ----------------- | -------------------- |
+| Desk Organizer | ₹500              | ₹500                 |
+| Table Lamp     | ₹800              | ₹800                 |
+| Notebook Set   | ₹250              | ₹250                 |
+| Storage Basket | ₹600              | ₹600                 |
+| Water Bottle   | ₹400              | ₹400                 |
+| Cushion Cover  | ₹300              | ₹300                 |
+
+Audit result: No recorded product-level unit-price changes between August and September.
+
+The previous response did not explicitly claim that prices changed. Its statements about price data availability were correct.
+
+The source data also does not establish whether competitors changed prices or whether customers perceived these prices as more attractive.
+
+### C. Discounts
+
+The previous response calculated the unit-weighted discount rate as:
+
+\\[ \text{Weighted Discount Rate}= \frac{\sum(U_s\times D)}{\sum U_s} \\]
+
+The recalculated values are:
+
+| Metric                 | August 2026 | September 2026 |
+| ---------------------- | ----------- | -------------- |
+| Units sold             | 76          | 90             |
+| Weighted discount rate | 7.89%       | 9.67%          |
+
+The difference, calculated using unrounded rates, is:
+
+\\[ 9.6667\\%-7.8947\\% =\boxed{1.77\text{ percentage points}} \\]
+
+Audit result: Correct.
+
+The previous response accurately described the increase in the unit-weighted discount rate.
+
+One clarification is important: this measure weights the recorded discount rates by units sold. It is not the same as the percentage of net sales lost to discounts.
+
+The dataset supports numerical comparisons of discounts, but it does not establish that discounts caused the increase in sales.
+
+### D. Product mix
+
+The previous response's product-level net-sales table is correct.
+
+| Product        | August net sales | September net sales | Change     |
+| -------------- | ---------------- | ------------------- | ---------- |
+| Desk Organizer | ₹5,500.00        | ₹6,750.00           | +₹1,250.00 |
+| Table Lamp     | ₹5,760.00        | ₹6,400.00           | +₹640.00   |
+| Notebook Set   | ₹3,600.00        | ₹3,600.00           | ₹0.00      |
+| Storage Basket | ₹3,360.00        | ₹5,400.00           | +₹2,040.00 |
+| Water Bottle   | ₹6,480.00        | ₹7,200.00           | +₹720.00   |
+| Cushion Cover  | ₹3,000.00        | ₹3,900.00           | +₹900.00   |
+| Total          | ₹27,700.00       | ₹33,250.00          | +₹5,550.00 |
+
+Audit result: Correct.
+
+Storage Basket recorded the largest absolute product-level increase, at ₹2,040.00.
+
+However, a distinction is needed:
+
+- The table shows changes in product-level net sales.
+- A formal product-mix effect would isolate the impact of changes in the relative sales proportions of products.
+- The observed product-level changes also reflect units sold, returns, and discounts.
+
+The previous response correctly identified product-level net-sales changes, but these figures alone should not be interpreted as a pure product-mix effect.
+
+## 5. Errors or misleading statements in the previous response
+
+I found no material arithmetic errors in the previous response.
+
+The following figures were verified against the original CSV:
+
+| Previous statement                                              | Audit result |
+| --------------------------------------------------------------- | ------------ |
+| August Online net sales: ₹12,120.00                             | Correct      |
+| August Store net sales: ₹15,580.00                              | Correct      |
+| September Online net sales: ₹17,550.00                          | Correct      |
+| September Store net sales: ₹15,700.00                           | Correct      |
+| Total increase: ₹5,550.00                                       | Correct      |
+| Online contribution: 97.84%                                     | Correct      |
+| Store contribution: 2.16%                                       | Correct      |
+| Units sold increased by 14                                      | Correct      |
+| Returns remained at 6                                           | Correct      |
+| Weighted discount rate increased by 1.77 percentage points      | Correct      |
+| Storage Basket had the largest product-level net-sales increase | Correct      |
+| Marketing causality was not established                         | Correct      |
+
+### Clarifications to the previous response
+
+I would make three refinements:
+
+1\. Discounts: Explicitly identify the weighted discount rate as weighted by units sold, rather than implying it is a sales-weighted discount measure.
+
+2\. Product mix: Describe the results as product-level net-sales changes, not as a fully isolated product-mix effect.
+
+3\. External causes: State more explicitly that the dataset can quantify changes in units, returns, discounts, and product-level net sales, but cannot determine whether marketing, seasonality, or external demand factors caused those changes.
+
+These are clarifications of interpretation, not corrections to the underlying arithmetic.
+
+## 6. Corrected management summary
+
+72 words · Comparison periods are explicit.
+
+September 2026 net sales increased by ₹5,550.00 (20.04%) compared with August 2026. Online contributed ₹5,430.00 (97.84%) of the increase, while Store contributed ₹120.00 (2.16%). From August to September 2026, units sold increased by 14, returns remained at 6, and the unit-weighted discount rate rose by 1.77 percentage points. Storage Basket recorded the largest product-level net-sales increase. These are observed numerical changes; the dataset does not establish that marketing or other external factors caused September's growth.

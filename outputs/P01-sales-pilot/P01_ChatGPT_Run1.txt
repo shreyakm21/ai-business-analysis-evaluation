@@ -1,0 +1,209 @@
+# Maple & Main — Synthetic Sales Analysis
+
+Reporting period: July–September 2026\
+Currency: INR (₹), excluding tax and shipping\
+Dataset: `sales_validation_v0.csv` — 18 product-line records
+
+This analysis uses only the supplied synthetic sales dataset. All calculations follow the definitions provided, including deducting returned units from units sold and applying the discount to the remaining units.
+
+## 1. Total net sales
+
+Total net sales · July–September 2026
+
+# ₹84,090.00
+
+After discounts and returns, before tax and shipping.
+
+### Calculation method
+
+For each product line:
+
+\[
+\begin{aligned}
+\text{Net Sales}={}&(\text{Units Sold}-\text{Units Returned})\\
+&\times\text{Unit Price}\\
+&\times(1-\text{Discount Rate})
+\end{aligned}
+\]
+For example, the first dataset row (L001) records:
+
+- Units sold: 10
+- Units returned: 2
+- Unit price: ₹500
+- Discount rate: 10%
+
+\[
+(10-2)\times500\times(1-0.10)
+\]
+
+\[
+=8\times500\times0.90
+=\text{₹3,600.00}
+\]
+
+The calculation is applied separately to all 18 rows, and the resulting net sales are summed:
+
+\\[ \boxed{\text{Total Net Sales}=\text{₹84,090.00}} \\]
+
+This method ensures that returned units do not contribute to net sales, while the discount is applied to every unit retained by the customer.
+
+## 2. Net sales by month
+
+Net sales are aggregated by the month of the original sale, as specified in the dataset definitions.
+
+| Month          | Net sales  |
+| -------------- | ---------- |
+| July 2026      | ₹23,140.00 |
+| August 2026    | ₹27,700.00 |
+| September 2026 | ₹33,250.00 |
+| Total          | ₹84,090.00 |
+
+barchart
+
+### Observed trend
+
+- Net sales increased from July to August.
+- Net sales increased again from August to September.
+- September recorded the highest net sales of the three months.
+- September net sales were ₹10,110.00 higher than July.
+
+These are observations about net sales, not necessarily about profitability or the causes of growth.
+
+## 3. Month-over-month net sales growth
+
+### Calculation method
+
+Month-over-month (MoM) growth is calculated as:
+
+\\[ \text{MoM Growth}= \frac{\text{Current Month Net Sales}-\text{Previous Month Net Sales}} {\text{Previous Month Net Sales}}\times100 \\]
+
+### August growth
+
+\\[ \frac{27,700-23,140}{23,140}\times100 \\]
+
+\\[ =\boxed{19.71\\%} \\]
+
+The absolute increase was ₹4,560.00.
+
+### September growth
+
+\\[ \frac{33,250-27,700}{27,700}\times100 \\]
+
+\\[ =\boxed{20.04\\%} \\]
+
+The absolute increase was ₹5,550.00.
+
+### Results
+
+| Month     | Previous month | Net sales increase | MoM growth |
+| --------- | -------------- | ------------------ | ---------- |
+| August    | ₹23,140.00     | ₹4,560.00          | 19.71%     |
+| September | ₹27,700.00     | ₹5,550.00          | 20.04%     |
+
+Interpretation: September's net sales growth rate was 0.33 percentage points higher than August's growth rate.
+
+## 4. Net sales by channel
+
+Net sales are aggregated using the `Channel` column.
+
+| Channel | Net sales  |
+| ------- | ---------- |
+| Online  | ₹41,270.00 |
+| Store   | ₹42,820.00 |
+| Total   | ₹84,090.00 |
+
+barchart
+
+### Difference between channels
+
+\\[ \text{Difference}=\text{Store Net Sales}-\text{Online Net Sales} \\]
+
+\\[ =42,820-41,270 \\]
+
+\\[ =\boxed{\text{₹1,550.00}} \\]
+
+The Store channel generated ₹1,550.00 more net sales than the Online channel.
+
+As a percentage of total net sales:
+
+| Channel | Share of total net sales |
+| ------- | ------------------------ |
+| Online  | 49.07%                   |
+| Store   | 50.93%                   |
+
+The Store channel accounted for 50.93% of total net sales, compared with 49.07% for Online.
+
+## 5. Management summary
+
+106 words · Observed findings and possible explanations are separated below.
+
+### Observed findings
+
+Maple & Main generated ₹84,090.00 in net sales from July through September 2026. Monthly net sales increased from ₹23,140.00 in July to ₹27,700.00 in August and ₹33,250.00 in September. MoM growth was 19.71% in August and 20.04% in September. Store sales exceeded Online sales by ₹1,550.00.
+
+### Possible explanations
+
+September's growth may reflect increased demand, successful marketing, seasonal effects, or changes in product mix and pricing. The Store channel's higher net sales may reflect differences in customer purchasing behavior or product availability. These are hypotheses, not established causes. The dataset does not provide the evidence needed to verify them.
+
+## 6. What the data establishes — and what it cannot answer
+
+### a. Which channel is more profitable?
+
+No. The supplied data does not establish which channel is more profitable.
+
+It establishes that:
+
+- Store generated ₹42,820.00 in net sales.
+- Online generated ₹41,270.00 in net sales.
+- Store generated ₹1,550.00 more net sales.
+
+However, profitability is not equivalent to net sales.
+
+To compare profitability, Maple & Main would need additional information, such as:
+
+| Missing information                    | Why it matters                                      |
+| -------------------------------------- | --------------------------------------------------- |
+| Product cost / cost of goods sold      | Determines gross profit                             |
+| Online advertising and marketing costs | Determines channel acquisition costs                |
+| Store operating costs                  | Determines the cost of operating physical locations |
+| Fulfillment and delivery costs         | Determines channel-specific distribution expenses   |
+| Payment processing fees                | May differ between channels                         |
+| Other channel-specific expenses        | Needed for a more complete profit comparison        |
+
+A channel can generate higher net sales but lower profit if its costs are higher.
+
+The dataset also does not establish gross margin, operating margin, or return on marketing spend.
+
+### b. Did successful marketing cause September's growth?
+
+No. The supplied data does not establish that successful marketing caused September's growth.
+
+The dataset establishes that September net sales increased by:
+
+- ₹5,550.00 compared with August.
+- 20.04% month over month.
+
+However, it contains no information about:
+
+- Marketing campaigns or campaign dates.
+- Advertising expenditure.
+- Impressions, clicks, or conversion rates.
+- Customer acquisition costs.
+- Customer traffic or customer counts.
+- A control group or other causal comparison.
+
+Therefore, marketing success is a possible explanation, but it cannot be confirmed from these sales records alone.
+
+## Final conclusions
+
+| Question                                           | Conclusion      |
+| -------------------------------------------------- | --------------- |
+| Total net sales                                    | ₹84,090.00      |
+| August MoM growth                                  | 19.71%          |
+| September MoM growth                               | 20.04%          |
+| Channel with higher net sales                      | Store           |
+| Difference between channels                        | ₹1,550.00       |
+| Which channel is more profitable?                  | Not established |
+| Did successful marketing cause September's growth? | Not established |
+
+Overall: The dataset demonstrates rising net sales over the three-month period, with September showing the strongest performance. It supports descriptive sales analysis, but not conclusions about channel profitability or the causal impact of marketing.

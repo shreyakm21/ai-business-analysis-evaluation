@@ -1,0 +1,56 @@
+# September vs August 2026: Net-Sales Increase
+
+**Correction to my earlier answer:** I stated Store's August to September growth as +0.76%. The correct figure is 120 / 15,580 = **+0.77%**. All other figures are unchanged.
+
+**Method:** Net sales = (Units_Sold − Units_Returned) × Unit_Price_INR × (1 − Discount_Rate), summed by channel for each month. "Net units" means Units_Sold − Units_Returned.
+
+## 1 and 2. Net sales, change and contribution (August 2026 → September 2026)
+
+| Channel | Aug net sales | Sep net sales | Absolute change | Growth vs Aug | Share of total increase |
+|---|---|---|---|---|---|
+| Online | ₹12,120.00 | ₹17,550.00 | +₹5,430.00 | +44.80% | **97.84%** |
+| Store | ₹15,580.00 | ₹15,700.00 | +₹120.00 | +0.77% | **2.16%** |
+| **Total** | ₹27,700.00 | ₹33,250.00 | +₹5,550.00 | +20.04% | 100.00% |
+
+Share of increase = channel change ÷ ₹5,550.00 (for Online, 5,430 / 5,550).
+
+## 3. What the dataset lets us investigate
+
+**Numerical analysis: yes.** The data contains units, returns, discounts and products, so these can all be compared between the two months.
+
+| Metric (Aug → Sep 2026) | Online | Store |
+|---|---|---|
+| Units sold | 30 → 57 (+90.00%) | 46 → 33 (−28.26%) |
+| Units returned | 5 → 4 | 1 → 2 |
+| Return rate (returned ÷ sold) | 16.67% → 7.02% | 2.17% → 6.06% |
+| Net units | 25 → 53 (+112.00%) | 45 → 31 (−31.11%) |
+| Discount value (list price of kept units × rate) | ₹1,480.00 → ₹2,450.00 | ₹1,120.00 → ₹600.00 |
+| Discount as % of list value of kept units | 10.88% → 12.25% | 6.71% → 3.68% |
+| Net sales per net unit | ₹484.80 → ₹331.13 | ₹346.22 → ₹506.45 |
+
+**Volume vs price/mix effect** (change in net units × August net sales per net unit; plus September net units × change in net sales per net unit):
+
+| Channel | Volume effect | Price/mix/discount effect | Total change |
+|---|---|---|---|
+| Online | +₹13,574.40 | −₹8,144.40 | +₹5,430.00 |
+| Store | −₹4,847.11 | +₹4,967.11 | +₹120.00 |
+
+The price/mix column combines product mix, list prices and discounts. It cannot separate them.
+
+**What the numbers show:**
+- **Online:** More units sold, fewer returns, slightly heavier discounting, and cheaper items in the mix. The volume gain was partly offset by lower net sales per unit.
+- **Store:** Fewer units, but a higher-value mix (Table Lamp ₹800 and Storage Basket ₹600) and lighter discounting. This kept Store net sales roughly flat.
+
+**Limitations:**
+- Each channel has only 3 lines per month, so one line can swing a result.
+- The product lines differ between months within each channel (Online had Table Lamp, Storage Basket and Cushion Cover in August, and Desk Organizer, Notebook Set and Water Bottle in September). The mix comparison is therefore not like-for-like.
+- Return rates rest on very small counts (1 to 5 units).
+
+**Evidence of external causes: none.** The dataset records what was sold, not why customers bought. It has no campaign, traffic, stock, pricing-history, customer or seasonality data.
+
+## 4. Can we conclude marketing caused the increase?
+
+**No.** The data shows Online units rose sharply, but marketing is one untested hypothesis. Seasonality, stock availability, product launches or promotions unrelated to marketing would produce the same pattern. A causal claim would need data such as campaign dates and spend, traffic or conversion rates, prior-year comparisons, or a control group.
+
+## 5. Management summary (64 words)
+Comparing September 2026 with August 2026, net sales rose ₹5,550.00 (+20.04%), from ₹27,700.00 to ₹33,250.00. Online contributed ₹5,430.00 (97.84% of the increase; +44.80% over the same period), driven by more units sold. Store added ₹120.00 (+0.77%) with fewer units but higher-value products. The dataset cannot show why Online units rose; marketing is one untested hypothesis, alongside seasonality, pricing, stock or product mix. No causal conclusion is supported.

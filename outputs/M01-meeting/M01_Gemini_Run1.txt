@@ -1,0 +1,75 @@
+```
+
+### 1. Meeting Summary
+
+Maple & Main participants reviewed inventory count discrepancies, customer service return guidance consistency, a potential promotional discount, and website policy review needs.
+
+### 2. Confirmed Decisions
+
+* Reconcile warehouse stock count differences and submit a list of unresolved items.
+
+
+* Draft a one-page return guide to address inconsistent agent explanations.
+
+
+* Require margin information before deciding on any discount promotion; no promotion is approved.
+
+
+* Schedule the website's return-policy page review for a future meeting.
+
+
+
+### 3. Action Register
+
+| Action | Status | Owner | Deadline | Dependency or approval |
+| --- | --- | --- | --- | --- |
+| Reconcile differences and send unresolved items list
+
+ | Agreed
+
+ | Daniel
+
+ | 5 November 2026
+
+ | None |
+| Draft one-page return guide
+
+ | Agreed
+
+ | Maya
+
+ | 6 November 2026
+
+ | Priya's review before distribution
+
+ |
+| Prepare margin analysis
+
+ | Agreed
+
+ | Daniel
+
+ | Not agreed
+
+ | Blocked until reconciliation is done
+
+ |
+
+### 4. Proposals and Conditional Future Work
+
+* **Proposal:** Offer a 15% weekend discount to clear older stock (unapproved).
+
+
+* **Conditional Future Work:** Draft campaign copy if a promotion is approved later (unassigned and unstarted).
+
+
+* **Conditional Future Work:** Assign an owner and deadline to review the website's return-policy page at the next meeting.
+
+
+
+### 5. Open Questions and Unconfirmed Explanations
+
+* **Inventory discrepancies:** Hypothesized as possibly caused by delayed return entries, but recorded as unconfirmed.
+
+
+* **Next meeting date:** Not agreed / no date set.

@@ -1,0 +1,19 @@
+Line_ID,Order_Date,Channel,Product,Units_Sold,Unit_Price_INR,Discount_Rate,Units_Returned
+L001,2026-07-03,Online,Desk Organizer,10,500,0.10,2
+L002,2026-07-06,Store,Table Lamp,8,800,0,1
+L003,2026-07-10,Online,Notebook Set,12,250,0.20,0
+L004,2026-07-15,Store,Storage Basket,6,600,0.10,0
+L005,2026-07-20,Online,Water Bottle,15,400,0,1
+L006,2026-07-25,Store,Cushion Cover,10,300,0.10,0
+L007,2026-08-03,Store,Desk Organizer,12,500,0,1
+L008,2026-08-07,Online,Table Lamp,10,800,0.10,2
+L009,2026-08-11,Store,Notebook Set,16,250,0.10,0
+L010,2026-08-16,Online,Storage Basket,8,600,0.20,1
+L011,2026-08-21,Store,Water Bottle,18,400,0.10,0
+L012,2026-08-26,Online,Cushion Cover,12,300,0,2
+L013,2026-09-04,Online,Desk Organizer,15,500,0.10,0
+L014,2026-09-08,Store,Table Lamp,9,800,0,1
+L015,2026-09-12,Online,Notebook Set,20,250,0.20,2
+L016,2026-09-17,Store,Storage Basket,10,600,0.10,0
+L017,2026-09-22,Online,Water Bottle,22,400,0.10,2
+L018,2026-09-27,Store,Cushion Cover,14,300,0,1

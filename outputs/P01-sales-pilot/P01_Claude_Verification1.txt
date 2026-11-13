@@ -1,0 +1,75 @@
+# Audit of the September vs August 2026 analysis
+
+I checked every figure against the file contents I read from `sales_validation_v0.csv` earlier in this conversation, recalculating from the raw columns without reusing my earlier numbers.
+
+## 1. Source rows (August and September 2026)
+
+Net sales = (Sold − Returned) × Price × (1 − Discount)
+
+| Line_ID | Month | Channel | Product | Sold | Returned | Unit price | Discount | Net sales (INR) |
+|---|---|---|---|---|---|---|---|---|
+| L007 | Aug | Store | Desk Organizer | 12 | 1 | 500 | 0.00 | 11 × 500 × 1.00 = 5,500.00 |
+| L008 | Aug | Online | Table Lamp | 10 | 2 | 800 | 0.10 | 8 × 800 × 0.90 = 5,760.00 |
+| L009 | Aug | Store | Notebook Set | 16 | 0 | 250 | 0.10 | 16 × 250 × 0.90 = 3,600.00 |
+| L010 | Aug | Online | Storage Basket | 8 | 1 | 600 | 0.20 | 7 × 600 × 0.80 = 3,360.00 |
+| L011 | Aug | Store | Water Bottle | 18 | 0 | 400 | 0.10 | 18 × 400 × 0.90 = 6,480.00 |
+| L012 | Aug | Online | Cushion Cover | 12 | 2 | 300 | 0.00 | 10 × 300 × 1.00 = 3,000.00 |
+| L013 | Sep | Online | Desk Organizer | 15 | 0 | 500 | 0.10 | 15 × 500 × 0.90 = 6,750.00 |
+| L014 | Sep | Store | Table Lamp | 9 | 1 | 800 | 0.00 | 8 × 800 × 1.00 = 6,400.00 |
+| L015 | Sep | Online | Notebook Set | 20 | 2 | 250 | 0.20 | 18 × 250 × 0.80 = 3,600.00 |
+| L016 | Sep | Store | Storage Basket | 10 | 0 | 600 | 0.10 | 10 × 600 × 0.90 = 5,400.00 |
+| L017 | Sep | Online | Water Bottle | 22 | 2 | 400 | 0.10 | 20 × 400 × 0.90 = 7,200.00 |
+| L018 | Sep | Store | Cushion Cover | 14 | 1 | 300 | 0.00 | 13 × 300 × 1.00 = 3,900.00 |
+
+## 2. Net sales by month and channel
+
+| Group | Lines | Calculation | Net sales |
+|---|---|---|---|
+| Aug Online | L008, L010, L012 | 5,760 + 3,360 + 3,000 | **₹12,120.00** |
+| Aug Store | L007, L009, L011 | 5,500 + 3,600 + 6,480 | **₹15,580.00** |
+| Sep Online | L013, L015, L017 | 6,750 + 3,600 + 7,200 | **₹17,550.00** |
+| Sep Store | L014, L016, L018 | 6,400 + 5,400 + 3,900 | **₹15,700.00** |
+
+Totals: August ₹27,700.00 and September ₹33,250.00. These match my earlier figures.
+
+## 3. Change and contribution (September 2026 vs August 2026)
+
+| Channel | Change | Growth vs Aug | Share of ₹5,550.00 increase |
+|---|---|---|---|
+| Online | +₹5,430.00 | 5,430 / 12,120 = **44.80%** | 5,430 / 5,550 = **97.84%** |
+| Store | +₹120.00 | 120 / 15,580 = **0.77%** | 120 / 5,550 = **2.16%** |
+| Total | +₹5,550.00 | 5,550 / 27,700 = **20.04%** | 100.00% |
+
+## 4. Checking my earlier statements
+
+| Statement | Source check | Result |
+|---|---|---|
+| Online units sold 30 → 57 (+90.00%) | 10+8+12 = 30; 15+20+22 = 57 | ✓ |
+| Store units sold 46 → 33 (−28.26%) | 12+16+18 = 46; 9+10+14 = 33 | ✓ |
+| Online returns 5 → 4; Store 1 → 2 | 2+1+2; 0+2+2; 1+0+0; 1+0+1 | ✓ |
+| Online return rate 16.67% → 7.02%; Store 2.17% → 6.06% | 5/30, 4/57, 1/46, 2/33 | ✓ |
+| Net units: Online 25 → 53 (+112.00%); Store 45 → 31 (−31.11%) | Sold − returned | ✓ |
+| Discount value: Online ₹1,480 → ₹2,450; Store ₹1,120 → ₹600 | Per-line list value × rate (e.g. L010: 4,200 × 0.20 = 840) | ✓ |
+| Discount % of list value: Online 10.88% → 12.25%; Store 6.71% → 3.68% | 1,480/13,600; 2,450/20,000; 1,120/16,700; 600/16,300 | ✓ |
+| Net sales per net unit: Online ₹484.80 → ₹331.13; Store ₹346.22 → ₹506.45 | 12,120/25; 17,550/53; 15,580/45; 15,700/31 | ✓ |
+| Volume vs price/mix split: Online +13,574.40 / −8,144.40; Store −4,847.11 / +4,967.11 | Each pair sums to the channel's change (5,430 and 120) | ✓ |
+| Product mix: Online moved from Table Lamp, Storage Basket and Cushion Cover to Desk Organizer, Notebook Set and Water Bottle | Matches L008/L010/L012 vs L013/L015/L017 | ✓ |
+| Store mix was "higher-value" in September | Store list price per kept unit rose from ₹371.11 to ₹525.81 | ✓ |
+| Online mix was "cheaper" in September | Online list price per kept unit fell from ₹544.00 to ₹377.36 | ✓ |
+
+**Numerical contributions vs external causes:** Everything above is arithmetic on the supplied rows. Online's September increase came from more units (+28 net units) partly offset by lower net sales per unit. Store's flat result combined fewer units with a higher-value mix. None of this identifies why customers bought more. No column records marketing, traffic, stock, pricing history or seasonality.
+
+## 5. Errors and misleading statements
+
+I found no numerical errors in the September vs August analysis. Four smaller points:
+
+1. **Store growth rounding (already corrected).** My first answer gave Store's September growth as +0.76%. The correct figure is +0.77%, as I stated in my second response.
+2. **Word counts I quoted were off.** I described my first summary as "about 85 words" when it was 74, and my second as 64 words when it was 67. Both were within their limits (120 and 80).
+3. **"Driven by more units sold" needs a caveat.** The Online figures support it as arithmetic, but it should not be read as a cause. The volume vs price/mix split also depends on the order of calculation (I valued volume at August net sales per unit). A different order would give a different split, though the total is the same. The price/mix figure also bundles product mix, list price and discount effects.
+4. **Small samples.** Each channel-month has only 3 lines, and the return counts are 1 to 5 units. My earlier limitation notes covered this.
+
+The conclusion that marketing causation is not established stands.
+
+## 6. Corrected management summary (58 words)
+
+Comparing September 2026 with August 2026, net sales rose ₹5,550.00 (+20.04%), from ₹27,700.00 to ₹33,250.00. Online added ₹5,430.00 (+44.80% on its August level; 97.84% of the increase), with more units sold but lower net sales per unit. Store added ₹120.00 (+0.77%). The data cannot show why Online units rose; marketing is untested, and no causal conclusion is supported.

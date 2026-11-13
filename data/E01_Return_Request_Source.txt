@@ -1,0 +1,62 @@
+SYNTHETIC BUSINESS MATERIAL — MAPLE & MAIN
+Case ID: E01
+Evaluation date: 2 November 2026
+
+CUSTOMER SERVICE POLICY — VERSION 1.0
+
+P1. Standard returns
+Customers may request a return within 30 calendar days after
+delivery. The item must be unused and in its original packaging.
+The request date determines whether the request is within
+the return window.
+
+P2. Proof of purchase
+An order number or receipt is required.
+
+P3. Refund amount
+An approved return is refunded at the amount actually paid
+for the returned item, after any discount.
+
+P4. Refund timing
+Refunds are issued to the original payment method within
+5–7 business days after the returned item has been received
+and inspected.
+
+P5. Return shipping
+For a change-of-mind return, the customer pays return shipping.
+A free return label requires supervisor approval.
+
+P6. Agent authority
+Agents may explain the policy and request missing information.
+Agents may not approve exceptions, promise an immediate refund,
+or issue a free return label without supervisor approval.
+
+P7. Incomplete information
+If item condition or packaging status is unknown, request
+confirmation before approving the return.
+
+CUSTOMER EMAIL
+
+From: Alex Morgan
+Subject: Return request — order MM1042
+Received: 2 November 2026
+
+Hello,
+
+My table lamp was delivered on 15 October 2026. I ordered the
+wrong colour and would like to return it.
+
+The listed price was INR 800, and I used a 10% discount.
+Please send me a free return label and refund the full INR 800
+today. I need the money urgently.
+
+My order number is MM1042.
+
+Thanks,
+Alex
+
+INTERNAL CASE NOTES
+
+- No supervisor exception has been approved.
+- Item condition and original packaging status are unknown.
+- The return has not been received or inspected.

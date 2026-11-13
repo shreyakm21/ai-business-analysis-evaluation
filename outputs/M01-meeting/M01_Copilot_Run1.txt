@@ -1,0 +1,28 @@
+Meeting Summary
+The meeting focused on stock-reporting discrepancies and customer return guidance. Daniel reported differences between the warehouse count and the inventory workbook but had not confirmed the cause. Maya raised inconsistent refund-timing explanations from customer-service agents. A proposal for a weekend discount was discussed but not approved. Several follow-up actions were assigned, while some future work remains contingent on further review or approval.
+
+Confirmed Decisions
+Daniel will reconcile inventory differences and provide a list of unresolved items by 5 November.
+Maya will draft a one-page return guide and send it by 6 November.
+Priya will review the return-guide draft before distribution.
+No promotion was approved during the meeting. Margin information is required before any decision on a discount.
+The website return-policy page requires review, but no owner or deadline was assigned.
+No campaign-copy assignment was made.
+
+Action Register
+Action	Status	Owner	Deadline	Dependency or approvalReconcile inventory differences and send unresolved-items list	Agreed	Daniel	5 November	None stated
+Draft one-page return guide	Agreed	Maya	6 November	Review by Priya before distribution
+Prepare margin analysis	Assigned	Daniel	To be agreed	Delivery date cannot be committed until reconciliation is complete
+Review website return-policy page	Awaiting assignment	Not assigned	Not assigned	Owner and deadline to be discussed at next meeting
+
+Proposals and Conditional Future Work
+Leo proposed a 15% weekend discount to help clear older stock. The proposal was not approved and requires margin information before a decision.
+If a promotion is approved later, Leo can draft campaign copy. Work will not begin unless approval is granted.
+The next meeting will be arranged separately; no date has been set.
+
+Open Questions and Unconfirmed Explanations
+The cause of the inventory differences has not been confirmed.
+Delayed return entries were suggested by Daniel as a possible cause of the inventory differences, but this was explicitly recorded as an unconfirmed hypothesis and not a root cause.
+The deadline for the margin analysis remains to be agreed.
+Ownership and timing for the website return-policy review remain undecided.
+The date of the next meeting has not been set.

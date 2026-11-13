@@ -1,0 +1,202 @@
+I can access the original CSV and audit the calculations directly from it: sales_validation_v0.csv.
+
+1. August and September Source Rows
+
+Net Sales Formula:
+
+(Units Sold−Units Returned)×Unit Price×(1−Discount Rate)(\text{Units Sold}-\text{Units Returned}) \times \text{Unit Price} \times (1-\text{Discount Rate}) Line_ID	Month	Channel	Product	Sold	Returned	Price	Discount	Net Sales (INR)L007	Aug-2026	Store	Desk Organizer	12	1	500	0.00	5,500.00
+L008	Aug-2026	Online	Table Lamp	10	2	800	0.10	5,760.00
+L009	Aug-2026	Store	Notebook Set	16	0	250	0.10	3,600.00
+L010	Aug-2026	Online	Storage Basket	8	1	600	0.20	3,360.00
+L011	Aug-2026	Store	Water Bottle	18	0	400	0.10	6,480.00
+L012	Aug-2026	Online	Cushion Cover	12	2	300	0.00	3,000.00
+L013	Sep-2026	Online	Desk Organizer	15	0	500	0.10	6,750.00
+L014	Sep-2026	Store	Table Lamp	9	1	800	0.00	6,400.00
+L015	Sep-2026	Online	Notebook Set	20	2	250	0.20	3,600.00
+L016	Sep-2026	Store	Storage Basket	10	0	600	0.10	5,400.00
+L017	Sep-2026	Online	Water Bottle	22	2	400	0.10	7,200.00
+L018	Sep-2026	Store	Cushion Cover	14	1	300	0.00	3,900.00
+
+All source values come directly from sales_validation_v0.csv.
+
+2. Recalculated Monthly Net Sales by Channel
+August 2026
+
+Online (L008, L010, L012)
+
+L008 = 5,760.00
+L010 = 3,360.00
+L012 = 3,000.00
+5,760+3,360+3,000=12,120.005,760 + 3,360 + 3,000 = 12,120.00
+
+August Online Net Sales = INR 12,120.00
+
+Store (L007, L009, L011)
+
+L007 = 5,500.00
+L009 = 3,600.00
+L011 = 6,480.00
+5,500+3,600+6,480=15,580.005,500 + 3,600 + 6,480 = 15,580.00
+
+August Store Net Sales = INR 15,580.00
+
+August Total
+
+12,120+15,580=27,700.0012,120 + 15,580 = 27,700.00
+
+August Total Net Sales = INR 27,700.00
+
+September 2026
+
+Online (L013, L015, L017)
+
+L013 = 6,750.00
+L015 = 3,600.00
+L017 = 7,200.00
+6,750+3,600+7,200=17,550.006,750 + 3,600 + 7,200 = 17,550.00
+
+September Online Net Sales = INR 17,550.00
+
+Store (L014, L016, L018)
+
+L014 = 6,400.00
+L016 = 5,400.00
+L018 = 3,900.00
+6,400+5,400+3,900=15,700.006,400 + 5,400 + 3,900 = 15,700.00
+
+September Store Net Sales = INR 15,700.00
+
+September Total
+
+17,550+15,700=33,250.0017,550 + 15,700 = 33,250.00
+
+September Total Net Sales = INR 33,250.00
+
+3. Recalculated Channel Changes and Contributions
+
+Total September-over-August increase:
+
+33,250−27,700=5,550.0033,250 - 27,700 = 5,550.00
+Online
+17,550−12,120=5,430.0017,550 - 12,120 = 5,430.00
+
+Contribution:
+
+5,4305,550×100=97.84%\frac{5,430}{5,550}\times100=97.84\%
+Store
+15,700−15,580=120.0015,700 - 15,580 = 120.00
+
+Contribution:
+
+1205,550×100=2.16%\frac{120}{5,550}\times100=2.16\% Channel	Aug (INR)	Sep (INR)	Change (INR)	ContributionOnline	12,120.00	17,550.00	+5,430.00	97.84%
+Store	15,580.00	15,700.00	+120.00	2.16%
+Total	27,700.00	33,250.00	+5,550.00	100.00%
+
+All figures recalculated directly from sales_validation_v0.csv.
+
+4. Audit of Previous Statements
+Numerical Contributions
+
+The dataset does allow investigation of:
+
+Changes in units sold.
+Changes in units returned.
+Changes in discount rates.
+Changes in product mix. August products were Desk Organizer, Table Lamp, Notebook Set, Storage Basket, Water Bottle, and Cushion Cover; September contains the same product categories but with different volumes and channel allocations.
+
+These are numerical factors observable in the data.
+
+External Causes
+
+The dataset contains no marketing, advertising, traffic, customer acquisition, competitor, or economic variables.
+
+Therefore it supports descriptive numerical analysis only and does not establish causes of the sales increase.
+
+5. Errors Found in My Previous Response
+
+Yes. I found material calculation errors.
+
+Error 1: August Online Net Sales
+
+I previously reported:
+
+August Online = INR 12,540.00
+
+Correct value:
+
+August Online = INR 12,120.00.
+
+Error 2: August Store Net Sales
+
+I previously reported:
+
+August Store = INR 15,160.00
+
+Correct value:
+
+August Store = INR 15,580.00.
+
+Error 3: September Online Net Sales
+
+I previously reported:
+
+September Online = INR 19,950.00
+
+Correct value:
+
+September Online = INR 17,550.00.
+
+Error 4: September Store Net Sales
+
+I previously reported:
+
+September Store = INR 13,300.00
+
+Correct value:
+
+September Store = INR 15,700.00.
+
+Error 5: Channel Changes
+
+I previously reported:
+
+Online change = +7,410.00
+Store change = –1,860.00
+
+Correct values:
+
+Online change = +5,430.00.
+Store change = +120.00.
+Error 6: Contribution Percentages
+
+I previously reported:
+
+Online contribution = 133.51%
+Store contribution = –33.51%
+
+Correct values:
+
+Online contribution = 97.84%.
+Store contribution = 2.16%.
+Error 7: Statement That Store Sales Declined
+
+I previously stated that Store sales decreased from August to September.
+
+The data show:
+
+August Store = 15,580.00
+September Store = 15,700.00
+
+Store sales actually increased by INR 120.00.
+
+Statements That Remain Correct
+
+The following were correct:
+
+September total net sales exceeded August total net sales.
+The dataset permits analysis of units, returns, discounts, and product mix.
+The dataset does not establish external causes.
+Marketing causation cannot be concluded from the CSV.
+6. Corrected Management Summary (≤80 words)
+
+Net sales increased from INR 27,700.00 in August 2026 to INR 33,250.00 in September 2026, a gain of INR 5,550.00. Online net sales increased from INR 12,120.00 to INR 17,550.00 (+INR 5,430.00), contributing 97.84% of the September-over-August increase. Store net sales increased from INR 15,580.00 to INR 15,700.00 (+INR 120.00), contributing 2.16%. The dataset supports analysis of sales drivers within the transaction data but does not identify external causes such as marketing.

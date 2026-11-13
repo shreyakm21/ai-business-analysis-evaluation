@@ -1,0 +1,46 @@
+# Maple & Main — Meeting Notes
+
+Meeting: Retail Operations Review | 2 November 2026
+
+Participants: Priya (Operations Manager), Daniel (Inventory Analyst), Maya (Customer Service Lead), Leo (Marketing Coordinator)
+
+## 1. Meeting summary
+
+The meeting focused on resolving inventory discrepancies, improving consistency in customer return guidance, and considering a potential promotion to clear older stock. The team agreed on immediate inventory reconciliation and return-guide drafting tasks. The proposed promotion remains unapproved pending margin analysis.
+
+## 2. Confirmed decisions
+
+- Inventory discrepancies must be reconciled, with unresolved items reported to Priya by 5 November.
+- Maya will draft a one-page return guide by 6 November. Priya must review it before distribution.
+- The proposed 15% weekend discount is not approved. Margin information is required before a decision.
+- Daniel owns the margin analysis, but its deadline is not yet agreed.
+- The website return-policy page requires review. Its owner and deadline will be assigned at the next meeting.
+- No campaign-copy assignment is approved.
+- The next meeting will be arranged separately; no date is set.
+
+## 3. Action register
+
+| Action                                                                               | Status                             | Owner                    | Deadline   | Dependency or approval                                                        |
+| ------------------------------------------------------------------------------------ | ---------------------------------- | ------------------------ | ---------- | ----------------------------------------------------------------------------- |
+| Reconcile warehouse count and inventory workbook; send unresolved-item list to Priya | Agreed                             | Daniel                   | 5 Nov 2026 | Cause of discrepancies remains unconfirmed                                    |
+| Draft one-page return guide                                                          | Agreed                             | Maya                     | 6 Nov 2026 | Priya must review before distribution                                         |
+| Prepare margin analysis                                                              | Agreed; timing pending             | Daniel                   | Not agreed | Inventory reconciliation must be completed before Daniel can commit to a date |
+| Review website return-policy page                                                    | Agreed; assignment pending         | Not assigned             | Not agreed | Owner and deadline to be set at next meeting                                  |
+| Draft campaign copy                                                                  | Conditional proposal; not assigned | Leo offered, if approved | Not agreed | Promotion approval required                                                   |
+| Arrange next meeting                                                                 | Pending                            | Not specified            | Not agreed | To be arranged separately                                                     |
+
+## 4. Proposals and conditional future work
+
+- 15% weekend discount: Leo proposed the promotion to clear older stock. Priya confirmed it is only a proposal. A decision requires margin information; no promotion is approved.
+- Campaign copy: Leo can draft copy if a promotion is approved later. He will not begin before approval.
+- Website policy review: The review is agreed, but assignment details remain pending.
+
+## 5. Open questions and unconfirmed explanations
+
+- What caused the differences between the warehouse count and inventory workbook?
+- Could delayed return entries explain the discrepancies? Daniel raised this only as a hypothesis; it is not a confirmed root cause.
+- What will the margin analysis show, and will the proposed discount be approved?
+- Who will own the website policy review, and by when?
+- When will the next meeting take place?
+
+Source: Meeting transcript, Case M01.

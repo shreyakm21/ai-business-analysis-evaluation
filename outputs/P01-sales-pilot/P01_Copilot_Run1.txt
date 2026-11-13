@@ -1,0 +1,83 @@
+Calculation Method
+
+For each order line:
+
+Net Sales=(Units Sold−Units Returned)×Unit Price×(1−Discount Rate)
+
+Returns are valued at the same discounted selling price and occur in the original sale month, per the dataset definition. All calculations below are based solely on sales_validation_v0.
+
+1. Total Net Sales
+Month	Net Sales (INR)July 2026	23,140.00
+August 2026	27,700.00
+September 2026	33,250.00
+Total	84,090.00
+
+Calculated from all 18 order lines in sales_validation_v0.
+
+Total Net Sales: INR 84,090.00
+
+2. Net Sales by Month
+Month	Net Sales (INR)July 2026	23,140.00
+August 2026	27,700.00
+September 2026	33,250.00
+
+Derived from summing monthly line-level net sales in sales_validation_v0.
+
+3. Month-over-Month Net Sales Growth
+
+Formula:
+
+Growth %=(Current Month Net Sales−Previous Month Net Sales)/Previous Month Net Sales​×100
+
+August vs July
+(27,700.00−23,140.00)/23,140.00​×100=19.71%
+
+September vs August
+(33,250.00−27,700.00)/27,700.00×100=20.04%
+
+Month	MoM GrowthAugust 2026	19.71%
+September 2026	20.04%
+
+Computed from monthly net sales totals derived from sales_validation_v0.
+
+4. Net Sales by Channel
+Channel	Net Sales (INR)Store	42,820.00
+Online	41,270.00
+
+Calculated from the channel field and line-level net sales in sales_validation_v0.
+
+Difference Between Channels
+42,820.00−41,270.00=1,550.00
+
+Store generated INR 1,550.00 more net sales than Online.
+
+5. Management Summary (≤120 words)
+
+Observed findings: Net sales increased from INR 23,140.00 in July to INR 27,700.00 in August and INR 33,250.00 in September. Month-over-month growth was 19.71% in August and 20.04% in September. Total net sales were INR 84,090.00. Store sales totaled INR 42,820.00 versus INR 41,270.00 online, a difference of INR 1,550.00.
+
+Possible explanations (not established by the data): Higher September sales may reflect increased order volume, changes in product mix, pricing, promotions, seasonality, or other operational factors. The dataset does not contain marketing activity, costs, traffic, customer, or profitability information, so those explanations cannot be verified.
+
+6. What the Data Does and Does Not Establish
+a. Which channel is more profitable?
+
+No.
+
+The dataset provides sales, prices, discounts, and returns, but does not provide costs, margins, operating expenses, advertising spend, fulfillment costs, or profit figures. Therefore, it cannot establish which channel is more profitable.
+
+b. Whether successful marketing caused September's growth?
+
+No.
+
+The dataset shows that September net sales exceeded August net sales, but it contains no marketing campaign data, spend, reach, customer acquisition metrics, or experimental evidence. Therefore, causation between marketing and September's growth cannot be established from the supplied data.
+
+Questions the Supplied Data Cannot Answer
+Which channel is more profitable?
+What product margins or profits were earned?
+Whether marketing activity caused sales growth.
+Whether seasonality influenced results.
+Whether customer behavior changed.
+Whether inventory availability affected sales.
+Whether pricing or promotion strategy improved performance beyond the discounts recorded.
+Whether the observed growth will continue in future months.
+
+These questions require information not present in sales_validation_v0.

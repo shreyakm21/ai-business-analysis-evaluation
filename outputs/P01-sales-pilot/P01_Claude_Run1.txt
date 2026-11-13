@@ -1,0 +1,68 @@
+I'll open the dataset and compute everything from the rows.
+
+# Maple & Main: Q3 2026 Net Sales Analysis
+
+**Method:** For each of the 18 lines, I calculated Net sales = (Units_Sold − Units_Returned) × Unit_Price_INR × (1 − Discount_Rate). I then summed by month and by channel. Both views reconcile to the same total.
+
+## Line-level net sales (INR)
+
+| Line | Month | Channel | Calculation | Net sales |
+|---|---|---|---|---|
+| L001 | Jul | Online | 8 × 500 × 0.90 | 3,600.00 |
+| L002 | Jul | Store | 7 × 800 × 1.00 | 5,600.00 |
+| L003 | Jul | Online | 12 × 250 × 0.80 | 2,400.00 |
+| L004 | Jul | Store | 6 × 600 × 0.90 | 3,240.00 |
+| L005 | Jul | Online | 14 × 400 × 1.00 | 5,600.00 |
+| L006 | Jul | Store | 10 × 300 × 0.90 | 2,700.00 |
+| L007 | Aug | Store | 11 × 500 × 1.00 | 5,500.00 |
+| L008 | Aug | Online | 8 × 800 × 0.90 | 5,760.00 |
+| L009 | Aug | Store | 16 × 250 × 0.90 | 3,600.00 |
+| L010 | Aug | Online | 7 × 600 × 0.80 | 3,360.00 |
+| L011 | Aug | Store | 18 × 400 × 0.90 | 6,480.00 |
+| L012 | Aug | Online | 10 × 300 × 1.00 | 3,000.00 |
+| L013 | Sep | Online | 15 × 500 × 0.90 | 6,750.00 |
+| L014 | Sep | Store | 8 × 800 × 1.00 | 6,400.00 |
+| L015 | Sep | Online | 18 × 250 × 0.80 | 3,600.00 |
+| L016 | Sep | Store | 10 × 600 × 0.90 | 5,400.00 |
+| L017 | Sep | Online | 20 × 400 × 0.90 | 7,200.00 |
+| L018 | Sep | Store | 13 × 300 × 1.00 | 3,900.00 |
+
+## 1. Total net sales
+**₹84,090.00** (23,140 + 27,700 + 33,250)
+
+## 2. Net sales by month
+
+| Month | Online | Store | Total |
+|---|---|---|---|
+| July | 11,600.00 | 11,540.00 | **23,140.00** |
+| August | 12,120.00 | 15,580.00 | **27,700.00** |
+| September | 17,550.00 | 15,700.00 | **33,250.00** |
+
+## 3. Month-over-month growth
+- **August:** (27,700 − 23,140) / 23,140 = 4,560 / 23,140 = **+19.71%**
+- **September:** (33,250 − 27,700) / 27,700 = 5,550 / 27,700 = **+20.04%**
+
+## 4. Net sales by channel
+- **Store:** ₹42,820.00 (11,540 + 15,580 + 15,700)
+- **Online:** ₹41,270.00 (11,600 + 12,120 + 17,550)
+- **Difference:** Store is ahead by **₹1,550.00**, which is 3.76% of Online's net sales.
+
+September growth by channel was uneven. Online rose by ₹5,430.00 (+44.80%) and Store by only ₹120.00 (+0.76%). Online therefore accounts for about 97.8% of September's ₹5,550.00 increase.
+
+## 5. Management summary (about 85 words)
+**Observed:** Net sales were ₹84,090.00 for July to September. They rose from ₹23,140.00 in July to ₹27,700.00 in August (+19.71%) and ₹33,250.00 in September (+20.04%). Store led Online by ₹1,550.00 overall, but Online drove nearly all of September's increase (₹5,430.00 of ₹5,550.00).
+
+**Possible explanations (untested):** promotions, seasonal demand, or assortment changes.
+
+**Caveat:** The data has no cost, margin, marketing or traffic information, and only 18 lines over three months. These are patterns, not conclusions.
+
+## 6. What the data does and does not establish
+
+**a. Which channel is more profitable: not established.** The dataset has no cost of goods, fulfilment, shipping, platform fees, store overheads or marketing spend. Store has higher net sales, but revenue is not profit. Online's heavier discounting may also affect margin, which cannot be assessed without costs.
+
+**b. Whether successful marketing caused September's growth: not established.** The dataset has no marketing activity, spend, campaign dates, traffic or customer data. It also has no baseline or comparison period, such as the prior year or a control group, to separate marketing from seasonality, pricing, discounts or stock changes. It shows that Online sales grew sharply in September. It does not show why.
+
+**Other questions the data cannot answer:**
+- Whether the trend will continue. Three months and 18 lines are too few to separate a trend from noise.
+- Whether the growth came from volume or from mix. This needs a product-level view over time, and each product has only one line per month per channel.
+- Whether the return rates differ meaningfully by channel. The sample is too small to say.

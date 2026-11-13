@@ -1,0 +1,206 @@
+# Maple & Main: Explaining September's Net-Sales Increase
+
+Comparison period: August 2026 versus September 2026\
+Dataset: `sales_validation_v0.csv`\
+Currency: INR (₹), excluding tax and shipping
+
+September net sales increased by ₹5,550.00 compared with August, from ₹27,700.00 to ₹33,250.00.
+
+The channel-level analysis shows that Online accounted for almost all of the increase, while Store sales increased only slightly.
+
+## 1. August and September net sales by channel
+
+The calculation for each product line is:
+
+\\[ \text{Net Sales}=(\text{Units Sold}-\text{Units Returned}) \times\text{Unit Price}\times(1-\text{Discount Rate}) \\]
+
+Net sales are then summed by month and channel.
+
+| Channel | August 2026 | September 2026 |
+| ------- | ----------- | -------------- |
+| Online  | ₹12,120.00  | ₹17,550.00     |
+| Store   | ₹15,580.00  | ₹15,700.00     |
+| Total   | ₹27,700.00  | ₹33,250.00     |
+
+Barchart displayed
+
+Observed: Online net sales rose substantially, whereas Store net sales remained relatively stable.
+
+## 2. Absolute change and contribution to total increase
+
+### Calculation method
+
+For each channel:
+
+\\[ \text{Absolute Change}=\text{September Sales}-\text{August Sales} \\]
+
+The percentage contribution to the total increase is:
+
+\\[ \text{Contribution}= \frac{\text{Channel's Absolute Change}} {\text{Total Net-Sales Increase}}\times100 \\]
+
+The total increase is:
+
+\\[ 33,250-27,700=\text{₹5,550.00} \\]
+
+### Results
+
+| Channel | August     | September  | Absolute change | Contribution to increase |
+| ------- | ---------- | ---------- | --------------- | ------------------------ |
+| Online  | ₹12,120.00 | ₹17,550.00 | +₹5,430.00      | 97.84%                   |
+| Store   | ₹15,580.00 | ₹15,700.00 | +₹120.00        | 2.16%                    |
+| Total   | ₹27,700.00 | ₹33,250.00 | +₹5,550.00      | 100.00%                  |
+
+### Online contribution
+
+\\[ \frac{17,550-12,120}{5,550}\times100 \\]
+
+\\[ =\frac{5,430}{5,550}\times100 =\boxed{97.84\\%} \\]
+
+### Store contribution
+
+\\[ \frac{15,700-15,580}{5,550}\times100 \\]
+
+\\[ =\frac{120}{5,550}\times100 =\boxed{2.16\\%} \\]
+
+Interpretation: Online contributed ₹5,430.00 of the ₹5,550.00 total increase. Store contributed the remaining ₹120.00.
+
+These percentages describe each channel's contribution to the absolute net-sales increase. They are not the channels' own growth rates.
+
+For additional context, the channel-specific growth rates were:
+
+| Channel | Growth from August to September |
+| ------- | ------------------------------- |
+| Online  | 44.80%                          |
+| Store   | 0.77%                           |
+| Total   | 20.04%                          |
+
+The comparison period for all three growth rates is August 2026 to September 2026.
+
+## 3. Can we investigate units sold, returns, discounts, and product mix?
+
+Yes. The supplied dataset contains the necessary fields for numerical analysis of these factors.
+
+However, numerical comparisons identify what changed in the recorded sales. They do not independently establish why those changes occurred.
+
+### A. Units sold and returned
+
+The dataset records `Units_Sold` and `Units_Returned` for each product line.
+
+| Metric         | August 2026 | September 2026 | Change |
+| -------------- | ----------- | -------------- | ------ |
+| Units sold     | 76          | 90             | +14    |
+| Units returned | 6           | 6              | 0      |
+| Units retained | 70          | 84             | +14    |
+
+Units retained are calculated as:
+
+\\[ \text{Units Retained}=\text{Units Sold}-\text{Units Returned} \\]
+
+For August:
+
+\\[ 76-6=70 \\]
+
+For September:
+
+\\[ 90-6=84 \\]
+
+Observed: September recorded 14 more units sold than August, while the number of returned units remained at 6.
+
+This supports a numerical comparison of sales volume and returns. It does not establish whether the increase came from more customers, larger orders, increased store traffic, or other factors.
+
+### B. Discounts
+
+The dataset records `Discount_Rate` for every product line.
+
+Discounts can be analyzed by:
+
+- Comparing the recorded discount rates between August and September.
+- Calculating the total discount amount associated with each month's sales.
+- Comparing discount rates by channel and product.
+- Evaluating how discounts affect net sales.
+
+For example, the unit-weighted average discount rate is:
+
+\\[ \text{Weighted Discount Rate}= \frac{\sum(\text{Units Sold}\times\text{Discount Rate})} {\sum\text{Units Sold}} \\]
+
+Using the supplied data:
+
+| Metric                      | August 2026 | September 2026 |
+| --------------------------- | ----------- | -------------- |
+| Unit-weighted discount rate | 7.89%       | 9.67%          |
+
+The unit-weighted discount rate increased by approximately 1.77 percentage points from August to September.
+
+Observed: The recorded discount rates, weighted by units sold, were higher in September.
+
+This does not establish that discounts caused the increase. Higher discounts may have increased demand, but the dataset does not provide a counterfactual showing what sales would have been without those discounts.
+
+### C. Product mix
+
+The dataset includes the `Product` column, so we can compare product-level net sales between August and September.
+
+| Product        | August 2026 | September 2026 | Change     |
+| -------------- | ----------- | -------------- | ---------- |
+| Desk Organizer | ₹5,500.00   | ₹6,750.00      | +₹1,250.00 |
+| Table Lamp     | ₹5,760.00   | ₹6,400.00      | +₹640.00   |
+| Notebook Set   | ₹3,600.00   | ₹3,600.00      | ₹0.00      |
+| Storage Basket | ₹3,360.00   | ₹5,400.00      | +₹2,040.00 |
+| Water Bottle   | ₹6,480.00   | ₹7,200.00      | +₹720.00   |
+| Cushion Cover  | ₹3,000.00   | ₹3,900.00      | +₹900.00   |
+| Total          | ₹27,700.00  | ₹33,250.00     | +₹5,550.00 |
+
+Observed:
+
+- Storage Basket recorded the largest absolute increase in net sales, at ₹2,040.00.
+- Desk Organizer increased by ₹1,250.00.
+- Notebook Set net sales remained unchanged.
+- All other products recorded positive net-sales changes.
+
+This allows us to investigate changes in the recorded product mix and product-level sales.
+
+However, product-level net sales changes do not isolate the effect of product mix from changes in units sold, returns, discounts, or prices. The dataset contains the variables needed for further numerical analysis, but these factors can interact.
+
+### D. Numerical analysis versus external explanations
+
+| Question                                         | Can the dataset answer it? |
+| ------------------------------------------------ | -------------------------- |
+| Did units sold increase?                         | Yes                        |
+| Did the number of returns change?                | Yes                        |
+| Did recorded discount rates change?              | Yes                        |
+| Did product-level net sales change?              | Yes                        |
+| Which products contributed most to the increase? | Yes                        |
+| Did customer traffic increase?                   | No                         |
+| Did a marketing campaign attract more customers? | No                         |
+| Did competitors change their prices?             | No                         |
+| Did seasonality cause the increase?              | No                         |
+| Did marketing cause September's growth?          | No                         |
+
+The dataset supports descriptive analysis and numerical decomposition of net sales.
+
+It does not contain customer-level data, marketing campaign information, competitor data, or a control group. Therefore, it cannot establish external causes.
+
+## 4. Can we conclude that marketing caused the increase?
+
+No. The supplied dataset does not establish that marketing caused September's net-sales increase.
+
+The data establishes the following:
+
+- September net sales increased by ₹5,550.00 compared with August.
+- Online contributed 97.84% of this increase.
+- Units sold increased from 76 in August to 90 in September.
+- The unit-weighted discount rate increased from 7.89% in August to 9.67% in September.
+- Storage Basket recorded the largest product-level net-sales increase.
+
+These observations are consistent with several possible explanations, including successful marketing, higher demand, increased discounts, seasonal effects, or changes in customer purchasing behavior.
+
+However, the dataset does not record marketing expenditure, campaign dates, impressions, clicks, conversions, customer acquisition, or a control group.
+
+Consequently, marketing success remains a possible explanation rather than an established cause.
+
+To investigate marketing causality, Maple & Main would need campaign-level data and a suitable comparison, such as a controlled experiment or a credible comparison of customers or locations exposed and not exposed to marketing.
+
+## 5. Management summary
+
+73 words · All growth comparisons specify their periods.
+
+September 2026 net sales increased by ₹5,550.00 (20.04%) compared with August 2026, rising from ₹27,700.00 to ₹33,250.00. Online contributed ₹5,430.00 (97.84%) of the increase, while Store contributed ₹120.00 (2.16%). From August to September 2026, units sold increased by 14, returns remained unchanged, and the unit-weighted discount rate rose by 1.77 percentage points. These are observed changes. Marketing, seasonality, and demand remain possible explanations; the dataset does not establish causality.
